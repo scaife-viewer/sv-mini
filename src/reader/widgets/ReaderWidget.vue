@@ -20,7 +20,7 @@
     URN,
   } from '@scaife-viewer/scaife-widgets';
   import Reader from '@/reader/components/Reader.vue';
-  import { SET_PASSAGE } from '@/constants';
+  import { SET_PASSAGE, UPDATE_METADATA } from '@/constants';
   import { MODULE_NS } from '@/reader/constants';
 
   export default {
@@ -29,9 +29,7 @@
       Paginator,
       Reader,
     },
-    scaifeConfig: {
-      location: 'main',
-    },
+    scaifeConfig: {},
     beforeUpdate() {
       if (this.urn && !this.$route.query.urn) {
         this.$router.push({
@@ -40,6 +38,13 @@
             urn: this.urn.absolute,
           },
         });
+      }
+      if (this.version !== this.urn.version) {
+        this.$store.dispatch(
+          UPDATE_METADATA,
+          { urn: this.urn.version },
+          { root: true },
+        );
       }
     },
     computed: {
@@ -78,6 +83,9 @@
         }
         return null;
       },
+      version() {
+        return this.$store.getters[`${MODULE_NS}/firstPassageUrn`].version;
+      },
       workTitle() {
         return this.$store.getters[`${MODULE_NS}/workTitle`];
       },
@@ -115,6 +123,9 @@
   article {
     margin: 0 5em;
     width: 100%;
+  }
+  h1 {
+    padding-bottom: 1em;
   }
   section {
     width: 100%;

@@ -15,7 +15,7 @@ localVue.use(SkeletonPlugin, { widgets });
 localVue.use(Vuex);
 
 describe('ReaderWidget.vue', () => {
-  it('passes props and parses lines from a graphql data', () => {
+  it('passes props and parses lines from graphql data', () => {
     const moduleStore = createStore();
     const store = new Vuex.Store({
       modules: {
