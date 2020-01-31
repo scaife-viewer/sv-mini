@@ -39,3 +39,10 @@ The following command was used to set up the initial project; it does not need t
 ```shell
 vue create sv-mini -d
 ```
+
+### Routing to a local ATLAS server.
+If you want to run an ATLAS server on your local machine then you can route all
+requests to that address by overriding the graphql endpoint, like so:
+```
+export VUE_APP_ATLAS_GRAPHQL_ENDPOINT=http://localhost:8000/graphql/
+```
