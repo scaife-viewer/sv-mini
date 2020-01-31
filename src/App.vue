@@ -36,12 +36,13 @@
       leftWidgets() {
         return [
           PassageReferenceWidget,
+          LibraryWidget,
           PassageAncestorsWidget,
           PassageChildrenWidget,
         ];
       },
       rightWidgets() {
-        return [TextSizeWidget, TextWidthWidget, LibraryWidget];
+        return [TextSizeWidget, TextWidthWidget];
       },
     },
   };
