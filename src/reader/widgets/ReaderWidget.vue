@@ -1,7 +1,6 @@
 <template>
   <article class="u-flex">
     <section class="reader-left">
-      <Metadata :workTitle="workTitle" />
       <div class="reader-container u-flex">
         <Paginator :urn="previous" direction="left" />
         <Reader :lines="lines" :textSize="textSize" :textWidth="textWidth" />
@@ -14,18 +13,13 @@
 <script>
   import gql from 'graphql-tag';
 
-  import WIDGETS_NS, {
-    Metadata,
-    Paginator,
-    URN,
-  } from '@scaife-viewer/scaife-widgets';
+  import WIDGETS_NS, { Paginator, URN } from '@scaife-viewer/scaife-widgets';
   import Reader from '@/reader/components/Reader.vue';
   import { SET_PASSAGE, UPDATE_METADATA } from '@/constants';
   import { MODULE_NS } from '@/reader/constants';
 
   export default {
     components: {
-      Metadata,
       Paginator,
       Reader,
     },

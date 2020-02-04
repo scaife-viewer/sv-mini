@@ -1,4 +1,4 @@
-<template v-if="metadata">
+<template>
   <div id="app">
     <FixedSkeleton
       :main-widget="mainWidget"
@@ -10,12 +10,13 @@
 
 <script>
   import {
+    LibraryWidget,
+    MetadataWidget,
     PassageAncestorsWidget,
     PassageChildrenWidget,
     PassageReferenceWidget,
     TextSizeWidget,
     TextWidthWidget,
-    LibraryWidget,
   } from '@scaife-viewer/scaife-widgets';
   import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
   import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
@@ -27,9 +28,6 @@
       this.$store.dispatch(FETCH_LIBRARY);
     },
     computed: {
-      metadata() {
-        return this.$store.getters.metadata;
-      },
       mainWidget() {
         return ReaderWidget;
       },
@@ -42,7 +40,7 @@
         ];
       },
       rightWidgets() {
-        return [TextSizeWidget, TextWidthWidget];
+        return [MetadataWidget, TextSizeWidget, TextWidthWidget];
       },
     },
   };
