@@ -121,11 +121,7 @@
 
 <style lang="scss">
   article {
-    margin: 0 5em;
     width: 100%;
-  }
-  h1 {
-    padding-bottom: 1em;
   }
   section {
     width: 100%;
