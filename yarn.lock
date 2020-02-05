@@ -944,10 +944,9 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@scaife-viewer/scaife-widgets@^0.9.0":
+"@scaife-viewer/scaife-widgets@https://github.com/scaife-viewer/scaife-widgets#53165555e8c0f727626ea766c5199404c4d86b45":
   version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@scaife-viewer/scaife-widgets/-/scaife-widgets-0.9.0.tgz#ce05e615430bcf3b9634e65f6612f8ccc843e098"
-  integrity sha512-kV1zqA45oLzX83AxnpSjPa9BEia3wUOPmehXk+JG0sHGqAdNlTcOuf5/B4E0QzD6xZ6QPbDWPoXzNFkZvc335A==
+  resolved "https://github.com/scaife-viewer/scaife-widgets#53165555e8c0f727626ea766c5199404c4d86b45"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
