@@ -38,10 +38,11 @@
           LibraryWidget,
           PassageAncestorsWidget,
           PassageChildrenWidget,
+          TOCWidget,
         ];
       },
       rightWidgets() {
-        return [MetadataWidget, TextSizeWidget, TextWidthWidget, TOCWidget];
+        return [MetadataWidget, TextSizeWidget, TextWidthWidget];
       },
     },
   };
