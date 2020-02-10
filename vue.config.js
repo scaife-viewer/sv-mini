@@ -9,7 +9,7 @@ module.exports = {
   },
   configureWebpack: {
     resolve: {
-      symlinks: false
+      symlinks: false,
     },
-  }
+  },
 };
