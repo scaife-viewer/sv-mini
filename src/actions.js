@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-import { gqlclient } from './gql';
+import { gqlclient } from '@/gql';
 import {
   FETCH_METADATA,
   UPDATE_METADATA,

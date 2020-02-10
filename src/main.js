@@ -6,11 +6,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import SkeletonPlugin from 'scaife-skeleton';
-import GraphQLPlugin from './gql';
+import GraphQLPlugin from '@/gql';
 
-import App from './App.vue';
-import router from './router';
-import store from './store';
+import App from '@/App.vue';
+import router from '@/router';
+import store from '@/store';
 
 const iconMap = [faChevronLeft, faChevronDown, faChevronRight].reduce(
   (map, obj) => {
