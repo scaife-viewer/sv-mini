@@ -46,3 +46,17 @@ requests to that address by overriding the graphql endpoint, like so:
 ```
 export VUE_APP_ATLAS_GRAPHQL_ENDPOINT=http://localhost:8000/graphql/
 ```
+
+### Deploying to QA instances
+PRs against `master` will automatically be deployed to Netlify to a one-off
+URL, a ["deploy preview"](https://docs.netlify.com/site-deploys/overview/#definitions).
+
+We can take advantage of [Netlify's deploy contexts](https://docs.netlify.com/configure-builds/file-based-configuration/#deploy-contexts) to override environment variables for these deploy previews.
+
+For example, we can override deploys of a deploy preview of the `feature/ci-cd` branch to
+point to an alternate ATLAS instance:
+
+```toml
+[context."feature/ci-cd".environment]
+  VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://sv-mini-atlas.herokuapp.com/graphql/"
+```
