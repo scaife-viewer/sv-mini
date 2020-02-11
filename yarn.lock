@@ -1118,6 +1118,20 @@
     node-sass "^4.13.0"
     vue "^2.6.10"
 
+"@scaife-viewer/scaife-widgets@git://github.com/scaife-viewer/scaife-widgets#a9fc5b0fd280ecb7bc6076700a7f3aea74a2c5b9":
+  version "0.10.0"
+  resolved "git://github.com/scaife-viewer/scaife-widgets#a9fc5b0fd280ecb7bc6076700a7f3aea74a2c5b9"
+  dependencies:
+    "@fortawesome/fontawesome-svg-core" "^1.2.25"
+    "@fortawesome/free-solid-svg-icons" "^5.11.2"
+    "@fortawesome/vue-fontawesome" "^0.1.8"
+    "@vue/eslint-config-airbnb" "^5.0.0"
+    core-js "^3.3.2"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    node-sass "^4.13.0"
+    vue "^2.6.10"
+
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.7.1.tgz#706f64bcb4a8b9642b48ae3ace444c70334d615d"
