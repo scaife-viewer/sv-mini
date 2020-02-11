@@ -3,7 +3,7 @@ import ApolloClient from 'apollo-boost';
 const client = new ApolloClient({
   uri:
     process.env.VUE_APP_ATLAS_GRAPHQL_ENDPOINT ||
-    'https://sv-mini-atlas.herokuapp.com/graphql/',
+    'https://sv-mini-atlas.scaife-viewer.org/graphql/',
 });
 
 const GraphQLPlugin = {
