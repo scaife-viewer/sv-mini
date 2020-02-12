@@ -17,6 +17,7 @@
     PassageReferenceWidget,
     TextSizeWidget,
     TextWidthWidget,
+    TOCWidget,
   } from '@scaife-viewer/scaife-widgets';
   import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
   import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
@@ -37,6 +38,7 @@
           LibraryWidget,
           PassageAncestorsWidget,
           PassageChildrenWidget,
+          TOCWidget,
         ];
       },
       rightWidgets() {
