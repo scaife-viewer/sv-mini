@@ -1,49 +1,16 @@
 <template>
   <div id="app">
-    <FixedSkeleton
-      :main-widget="mainWidget"
-      :left-widgets="leftWidgets"
-      :right-widgets="rightWidgets"
-    />
+    <Nav />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import {
-    LibraryWidget,
-    MetadataWidget,
-    PassageAncestorsWidget,
-    PassageChildrenWidget,
-    PassageReferenceWidget,
-    TextSizeWidget,
-    TextWidthWidget,
-    TOCWidget,
-  } from '@scaife-viewer/scaife-widgets';
-  import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
-  import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
+  import Nav from '@/components/Nav.vue';
 
   export default {
-    name: 'app',
-    beforeCreate() {
-      this.$store.dispatch(FETCH_METADATA);
-      this.$store.dispatch(FETCH_LIBRARY);
-    },
-    computed: {
-      mainWidget() {
-        return ReaderWidget;
-      },
-      leftWidgets() {
-        return [
-          PassageReferenceWidget,
-          LibraryWidget,
-          PassageAncestorsWidget,
-          PassageChildrenWidget,
-          TOCWidget,
-        ];
-      },
-      rightWidgets() {
-        return [MetadataWidget, TextSizeWidget, TextWidthWidget];
-      },
+    components: {
+      Nav,
     },
   };
 </script>
@@ -63,5 +30,8 @@
   .body {
     display: flex;
     justify-content: center;
+  }
+  div.main-layout > .widget {
+    border-top: none;
   }
 </style>
