@@ -13,7 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
-    "@scaife-viewer/scaife-widgets": "git://github.com/scaife-viewer/scaife-widgets#3c0349c429ac2a57154830138e5279f4bfd8a26e",
+    "@scaife-viewer/scaife-widgets": "git://github.com/scaife-viewer/scaife-widgets#bdc775d998e4aa0fa3ac9e83f2724d5f4029a0c0",
     "apollo-boost": "^0.4.7",
     "core-js": "^3.5.0",
     "graphql": "^14.4.2",
