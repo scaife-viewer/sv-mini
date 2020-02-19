@@ -1,2 +1,4 @@
 [context."feature/ci-cd".environment]
   VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://sv-mini-atlas.herokuapp.com/graphql/"
+[context."feature/default-tocs".environment]
+  VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://mini-stack-a-feature-se-j47yu0.herokuapp.com/graphql/"
