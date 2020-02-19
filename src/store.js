@@ -13,7 +13,7 @@ Vue.use(Vuex);
 const readerStore = createReaderStore();
 const skeletonStore = createSkeletonStore();
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   modules: {
     [readerStore.namespace]: readerStore.store,
     [scaifeWidgets.namespace]: scaifeWidgets.store,
@@ -21,3 +21,12 @@ export default new Vuex.Store({
   },
   ...createStore(),
 });
+
+if (process.env.VUE_APP_TOC_ENDPOINT) {
+  // TODO: Determine if there is a better way to make this
+  // a configurable value.
+  store.state[scaifeWidgets.namespace].tocEndpoint =
+    process.env.VUE_APP_TOC_ENDPOINT;
+}
+
+export default store;
