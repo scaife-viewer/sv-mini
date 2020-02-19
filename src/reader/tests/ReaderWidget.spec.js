@@ -55,16 +55,16 @@ describe('ReaderWidget.vue', () => {
     });
     const paginators = wrapper.findAll(Paginator);
 
-    expect(paginators.at(0).props()).toStrictEqual({
+    expect(paginators.at(0).props()).toEqual({
       urn: new URN('urn:cts:greekLit:tlg0012.tlg001.msA:1.1-2'),
       direction: 'left',
     });
-    expect(wrapper.find(Reader).props()).toStrictEqual({
+    expect(wrapper.find(Reader).props()).toEqual({
       lines: ['some', 'data'],
       textSize: 'md',
       textWidth: 'normal',
     });
-    expect(paginators.at(1).props()).toStrictEqual({
+    expect(paginators.at(1).props()).toEqual({
       urn: new URN('urn:cts:greekLit:tlg0012.tlg001.msA:1.5-6'),
       direction: 'right',
     });
