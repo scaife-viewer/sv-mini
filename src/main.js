@@ -30,6 +30,14 @@ if (process.env.VUE_APP_TOC_ENDPOINT) {
   widgetEndpoints.tocEndpoint = process.env.VUE_APP_TOC_ENDPOINT;
 }
 Vue.use(EndpointsPlugin, widgetEndpoints);
+
+// FIXME: This is the only way I was able to actually modify
+// $scaife.endpoints correctly
+Vue.prototype.$scaife.endpoints = {
+  ...Vue.prototype.$scaife.endpoints,
+  ...widgetEndpoints,
+};
+
 Vue.config.productionTip = false;
 
 Vue.prototype.$isEmpty = obj =>
