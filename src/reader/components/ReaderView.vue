@@ -17,6 +17,8 @@
     TextWidthWidget,
     TOCWidget,
   } from '@scaife-viewer/scaife-widgets';
+  // eslint-disable-next-line max-len
+  import TokenAnnotationWidget from '@/reader/widgets/TokenAnnotationWidget.vue';
   import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
   import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
 
@@ -40,7 +42,12 @@
         ];
       },
       rightWidgets() {
-        return [MetadataWidget, TextSizeWidget, TextWidthWidget];
+        return [
+          MetadataWidget,
+          TextSizeWidget,
+          TextWidthWidget,
+          TokenAnnotationWidget,
+        ];
       },
     },
   };
