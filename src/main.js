@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import SkeletonPlugin from 'scaife-skeleton';
+import { EndpointsPlugin } from '@scaife-viewer/scaife-widgets';
 import GraphQLPlugin from '@/gql';
 
 import App from '@/App.vue';
@@ -23,6 +24,12 @@ const iconMap = [faChevronLeft, faChevronDown, faChevronRight].reduce(
 
 Vue.use(SkeletonPlugin, { iconMap });
 Vue.use(GraphQLPlugin);
+
+const widgetEndpoints = {};
+if (process.env.VUE_APP_TOC_ENDPOINT) {
+  widgetEndpoints.tocEndpoint = process.env.VUE_APP_TOC_ENDPOINT;
+}
+Vue.use(EndpointsPlugin, widgetEndpoints);
 
 Vue.config.productionTip = false;
 
