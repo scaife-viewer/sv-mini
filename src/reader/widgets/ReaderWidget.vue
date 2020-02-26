@@ -65,6 +65,17 @@
                   urn
                   ref
                   textContent
+                  tokens {
+                    edges {
+                      node {
+                        idx
+                        uuid
+                        value
+                        lemma
+                        tag
+                      }
+                    }
+                  }
                 }
               }
               pageInfo {
