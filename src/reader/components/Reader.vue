@@ -6,7 +6,7 @@
     <ReaderLine
       v-for="(line, index) in lines"
       :key="`${index}-${line.label}`"
-      :line=line
+      :line="line"
     />
   </div>
 </template>
