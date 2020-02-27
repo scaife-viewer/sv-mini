@@ -73,29 +73,29 @@
   }
   .token .ref {
     font-family: 'Lucida Console', Monaco, monospace;
-    font-size: 10px;
+    font-size: 0.55em;
     color: #999;
   }
   .token .text {
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 700;
     color: #000;
   }
   .token .lemma {
-    font-size: 16px;
+    font-size: 0.88em;
     color: #333;
   }
   .token .pos {
-    font-size: 14px;
+    font-size: 0.77em;
     color: #999;
   }
   .token .analysis {
     font-family: 'Lucida Console', Monaco, monospace;
-    font-size: 12px;
+    font-size: 0.66em;
     color: #999;
   }
   .token .gloss {
-    font-size: 16px;
+    font-size: 0.88em;
     color: #333;
     font-style: italic;
   }
