@@ -49,6 +49,9 @@
                         uuid
                         value
                         lemma
+                        partOfSpeech
+                        case
+                        mood
                         tag
                       }
                     }
@@ -76,6 +79,9 @@
               uuid: token.uuid,
               value: token.value,
               lemma: token.lemma,
+              partOfSpeech: token.partOfSpeech,
+              case: token.case,
+              mood: token.mood,
               tag: token.tag,
             };
           });

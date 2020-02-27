@@ -9,9 +9,8 @@
         <div class="ref">{{ token.uuid }}</div>
         <div class="text">{{ token.value }}</div>
         <div class="lemma">{{ token.lemma || '-' }}</div>
+        <div class="pos">{{ token.partOfSpeech || '-' }}</div>
         <div class="analysis">{{ token.tag || '-' }}</div>
-        <!-- <div class="pos">article</div> -->
-        <!-- <div class="analysis">GPX</div> -->
         <!-- <div class="gloss">of the</div> -->
       </span>
     </section>
@@ -39,6 +38,7 @@
             uuid: token.uuid,
             value: token.value,
             lemma: token.lemma,
+            partOfSpeech: token.partOfSpeech,
             tag: token.tag,
           };
         });

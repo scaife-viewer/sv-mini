@@ -72,6 +72,7 @@
                         uuid
                         value
                         lemma
+                        partOfSpeech
                         tag
                       }
                     }
