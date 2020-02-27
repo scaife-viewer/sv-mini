@@ -25,10 +25,7 @@
     props: ['line'],
     computed: {
       interlinear() {
-        // TODO: Proper toggle
-        return (
-          this.$route.query.interlinear && this.$route.query.interlinear === 'y'
-        );
+        return this.$store.getters.interlinear;
       },
       tokens() {
         return this.line.tokens.edges.map(edge => {

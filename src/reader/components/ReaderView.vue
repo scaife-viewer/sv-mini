@@ -19,6 +19,7 @@
   } from '@scaife-viewer/scaife-widgets';
   // eslint-disable-next-line max-len
   import TokenAnnotationWidget from '@/reader/widgets/TokenAnnotationWidget.vue';
+  import DisplayModeWidget from '@/reader/widgets/DisplayModeWidget.vue';
   import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
   import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
 
@@ -46,6 +47,7 @@
           MetadataWidget,
           TextSizeWidget,
           TextWidthWidget,
+          DisplayModeWidget,
           TokenAnnotationWidget,
         ];
       },

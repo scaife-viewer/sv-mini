@@ -6,6 +6,7 @@ import {
   UPDATE_METADATA,
   FETCH_LIBRARY,
   SET_PASSAGE,
+  TOGGLE_INTERLINEAR,
 } from '@/constants';
 
 export default {
@@ -69,4 +70,7 @@ export default {
       .then(data => commit(FETCH_LIBRARY, data.data.tree.tree, { root: true }));
   },
   [SET_PASSAGE]: ({ commit }, { urn }) => commit(SET_PASSAGE, urn),
+  [TOGGLE_INTERLINEAR]: ({ commit }) => {
+    commit(TOGGLE_INTERLINEAR);
+  },
 };

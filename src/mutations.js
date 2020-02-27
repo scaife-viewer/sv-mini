@@ -1,4 +1,9 @@
-import { FETCH_METADATA, FETCH_LIBRARY, SET_PASSAGE } from '@/constants';
+import {
+  FETCH_METADATA,
+  FETCH_LIBRARY,
+  SET_PASSAGE,
+  TOGGLE_INTERLINEAR,
+} from '@/constants';
 
 export default {
   [FETCH_METADATA]: (state, metadata) => {
@@ -9,5 +14,8 @@ export default {
   },
   [SET_PASSAGE]: (state, urn) => {
     state.passage = urn;
+  },
+  [TOGGLE_INTERLINEAR]: state => {
+    state.interlinear = !state.interlinear;
   },
 };

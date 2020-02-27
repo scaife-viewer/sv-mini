@@ -7,4 +7,5 @@ export default {
     state.metadata ? new URN(state.metadata.firstPassageUrn) : null,
   workTitle: state => (state.metadata ? state.metadata.workTitle : ''),
   libraryTree: state => state.libraryTree,
+  interlinear: state => state.interlinear,
 };
