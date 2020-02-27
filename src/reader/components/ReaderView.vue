@@ -10,12 +10,14 @@
   import {
     LibraryWidget,
     MetadataWidget,
+    NewAlexandriaWidget,
     PassageAncestorsWidget,
     PassageChildrenWidget,
     PassageReferenceWidget,
     TextSizeWidget,
     TextWidthWidget,
     TOCWidget,
+    WordListWidget,
   } from '@scaife-viewer/scaife-widgets';
   import ReaderWidget from '@/reader/widgets/ReaderWidget.vue';
   import { FETCH_METADATA, FETCH_LIBRARY } from '@/constants';
@@ -40,7 +42,13 @@
         ];
       },
       rightWidgets() {
-        return [MetadataWidget, TextSizeWidget, TextWidthWidget];
+        return [
+          MetadataWidget,
+          TextSizeWidget,
+          TextWidthWidget,
+          WordListWidget,
+          NewAlexandriaWidget,
+        ];
       },
     },
   };
