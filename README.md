@@ -1,4 +1,6 @@
-# sv-mini
+# SV Mini
+
+front-end for the Scaife "SV Mini" prototype
 
 ## Prerequisites
 - [Node.js 12](https://nodejs.org/en/)
