@@ -10,7 +10,7 @@ Vue.use(Vuex);
 const client = new ApolloClient({
   uri:
     process.env.VUE_APP_ATLAS_GRAPHQL_ENDPOINT ||
-    'https://sv-mini-atlas.scaife-viewer.org/graphql/',
+    'https://sv-mini-atlas-dev.scaife-viewer.org/graphql/',
 });
 const apolloProvider = new VueApollo({
   defaultClient: client,
