@@ -1,17 +1,22 @@
 import Vue from 'vue';
+import VueApollo from 'vue-apollo';
+import { sync } from 'vuex-router-sync';
+
 import {
   faChevronLeft,
   faChevronDown,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import SkeletonPlugin from 'scaife-skeleton';
-import { EndpointsPlugin } from '@scaife-viewer/scaife-widgets';
-import GraphQLPlugin from '@/gql';
+import { SkeletonPlugin } from '@scaife-viewer/skeleton';
+import { DefaultModeReader } from '@scaife-viewer/widget-reader';
+import { DISPLAY_MODE_DEFAULT } from '@scaife-viewer/store';
 
 import App from '@/App.vue';
 import router from '@/router';
-import store from '@/store';
+import store, { apolloProvider } from '@/store';
+
+sync(store, router);
 
 const iconMap = [faChevronLeft, faChevronDown, faChevronRight].reduce(
   (map, obj) => {
@@ -22,22 +27,23 @@ const iconMap = [faChevronLeft, faChevronDown, faChevronRight].reduce(
   {},
 );
 
-Vue.use(SkeletonPlugin, { iconMap });
-Vue.use(GraphQLPlugin);
+const config = {
+  readerComponents: {
+    [DISPLAY_MODE_DEFAULT]: DefaultModeReader,
+  },
+};
+Vue.use(SkeletonPlugin, { iconMap, config });
 
-const widgetEndpoints = {};
-if (process.env.VUE_APP_TOC_ENDPOINT) {
-  widgetEndpoints.tocEndpoint = process.env.VUE_APP_TOC_ENDPOINT;
-}
-Vue.use(EndpointsPlugin, widgetEndpoints);
+Vue.use(VueApollo);
 
 Vue.config.productionTip = false;
 
-Vue.prototype.$isEmpty = obj =>
+Vue.prototype.$isEmpty = (obj) =>
   Object.keys(obj).length === 0 && obj.constructor === Object;
 
 new Vue({
   router,
   store,
-  render: h => h(App),
+  render: (h) => h(App),
+  apolloProvider,
 }).$mount('#app');
