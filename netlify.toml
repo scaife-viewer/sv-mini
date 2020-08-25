@@ -1,2 +1,4 @@
 [context."develop".environment]
   VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://sv-mini-atlas-dev.scaife-viewer.org/graphql/"
+[context."packaged".environment]
+  VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://mini-stack-a-task-updat-y6iwnd.herokuapp.com/graphql/"
