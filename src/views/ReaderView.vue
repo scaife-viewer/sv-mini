@@ -56,8 +56,8 @@
       },
       leftWidgets() {
         return [
-          PassageReferenceWidget,
           LibraryWidget,
+          PassageReferenceWidget,
           PassageAncestorsWidget,
           PassageSiblingsWidget,
           PassageChildrenWidget,
