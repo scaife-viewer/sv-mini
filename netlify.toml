@@ -1,2 +1,4 @@
 [context."master".environment]
   VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://sv-mini-atlas.scaife-viewer.org/graphql/"
+[context."frontend-updates".environment]
+  VUE_APP_ATLAS_GRAPHQL_ENDPOINT = "https://sv-mini-atlas-pr-36.herokuapp.com/graphql/"
