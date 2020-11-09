@@ -40,7 +40,7 @@
     name: 'ReaderView',
     components: { FixedSkeleton, LoaderBall },
     beforeCreate() {
-      if (!this.$route.query.urn) {
+      if (!this.$route.params.urn) {
         // load the first version returned from ATLAS
         this.$store.dispatch(`${MODULE_NS}/${FETCH_METADATA}`);
       }
