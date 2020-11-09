@@ -1406,10 +1406,10 @@
     mapbox-gl "^1.11.0"
     vue-mapbox "^0.4.1"
 
-"@scaife-viewer/reader-alignments-mode@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@scaife-viewer/reader-alignments-mode/-/reader-alignments-mode-0.0.10.tgz#640d600989f65e80af8fd78bbd0134a9cb3cbc3d"
-  integrity sha512-GB2ibhmx8NqsAIAEru4WZvSRIiU8SoMROS9eFebse4hDr1P0gtE9C4TYrUqtzp/GXNKSK5xtu+QtVPTSVjzh+Q==
+"@scaife-viewer/reader-alignments-mode@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@scaife-viewer/reader-alignments-mode/-/reader-alignments-mode-0.0.11.tgz#381f9b36f0afc45c972ffeb9dcc43d728a05601a"
+  integrity sha512-D2f+M6uvYHxTU8R9VhY4Bso+4av6JHVqb16yUDD+m5byygk9Ghmb502plcR0RWM3ZvqUJI9zZGdNwX29TPeQXA==
   dependencies:
     "@scaife-viewer/common" "^0.0.7"
     "@scaife-viewer/store" "^0.0.10"
